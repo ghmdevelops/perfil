@@ -1,0 +1,17 @@
+# Build and Release Folders
+src/
+load/
+
+# Other files and folders
+/icons8-linkedin.png
+/perfil.html
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.

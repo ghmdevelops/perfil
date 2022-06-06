@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Cel/E-mail</title>
+
+    <script src="https://kit.fontawesome.com/dc28592b31.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <h1>Entre em contato <i class="fa-solid fa-id-badge"></i></h1>
+
+    <form action="">
+
+        <div class="col2-whats">
+            <img id="whatsapp" width="100" src="https://img.icons8.com/color/144/undefined/whatsapp--v1.png"
+                alt="whatsapp" />
+        </div>
+
+        <div class="col2-outlook">
+            <img id="outlook" width="100"
+                src="https://img.icons8.com/color/144/undefined/microsoft-outlook-2019--v2.png" alt="outlook" />
+        </div>
+
+        <script async defer>
+            $("#outlook").on('click', function (valor) {
+                $.alert({
+                    title: '<b>E-mail</b>',
+                    content: '<p style="font-size: 20px; font-weight: 400;">gehaime_barros94@hotmail.com</p>',
+                    boxWidth: '60%',
+                    useBootstrap: false,
+                    type: "blue",
+                    buttons: ({
+                        tryAgain: ({
+                            text: "ok",
+                            btnClass: 'btn-blue',
+                        })
+                    })
+                });
+            });
+
+            $("#whatsapp").on('click', function (valor) {
+                $.alert({
+                    title: '<b>Whatsapp</b>',
+                    content: '<p style="font-size: 20px; font-weight: 400;">(11) 90000-0000</p>',
+                    boxWidth: '60%',
+                    useBootstrap: false,
+                    type: "green",
+                    buttons: ({
+                        tryAgain: ({
+                            text: "ok",
+                            btnClass: 'btn-green',
+                        })
+                    })
+                });
+            });
+        </script>
+    </form>
+
+    <div>
+        <nav>
+            <ul onclick="(function back (value) {window.location.href='./index.html';})()">
+                <li>
+                    Voltar
+                    <span></span><span></span><span></span><span></span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+        body {
+            background-color: #120f10f7;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        form {
+            width: 100%;
+            text-align: center;
+        }
+
+        div.col2-whats,
+        div.col2-outlook {
+            height: 30rem;
+            width: 24rem;
+            border-radius: 3rem;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        div.col2-whats {
+            border: 2px solid #2E8B57;
+        }
+
+        div.col2-outlook {
+            border: 2px solid #2B60DE;
+        }
+
+        div.col2-whats:hover {
+            background-color: #2E8B57;
+            border: 2px solid #2E8B57;
+        }
+
+        div.col2-outlook:hover {
+            background-color: #2B60DE;
+            border: 2px solid #2B60DE;
+        }
+
+        img {
+            position: relative;
+            margin-top: 10rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            --c: #d98bf4;
+            color: var(--c);
+            font-size: 13px;
+            border: 0.1em solid var(--c);
+            border-radius: 0.5em;
+            width: 12em;
+            height: 3em;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            text-align: center;
+            line-height: 3em;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: 0.9s;
+            margin: auto;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+
+        nav ul li span {
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            background-color: var(--c);
+            transform: translateY(150%);
+            border-radius: 50%;
+            left: calc((var(--n) - 1) * 25%);
+            transition: 0.5s;
+            transition-delay: calc((var(--n) - 1) * 0.1s);
+            z-index: -1;
+        }
+
+        nav ul li:hover {
+            color: black;
+        }
+
+        nav ul li:hover span {
+            transform: translateY(0) scale(2);
+        }
+
+        nav ul li span:nth-child(1) {
+            --n: 1;
+        }
+
+        nav ul li span:nth-child(2) {
+            --n: 2;
+        }
+
+        nav ul li span:nth-child(3) {
+            --n: 3;
+        }
+
+        nav ul li span:nth-child(4) {
+            --n: 4;
+        }
+
+        @media screen and (max-width: 991px) {
+
+            div.col2-whats,
+            div.col2-outlook {
+                height: 30rem;
+                width: 22rem;
+                border-radius: 3rem;
+                cursor: pointer;
+                text-align: center;
+                display: inline-block;
+                vertical-align: middle;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin: auto;
+            }
+
+            div.col2-outlook {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+
+</body>
+
+</html>
