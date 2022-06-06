@@ -20,7 +20,7 @@
 <body>
 
     <div class="container">
-        <h1 class="neon">Olá, seja bem vindo a minha pagina pessoal <img width="33" src="https://img.icons8.com/bubbles/50/undefined/checkmark.png" alt="bubbles"/></h1>
+        <h1 class="neon">Olá, seja bem vindo a minha pagina pessoal <img id="clouds" src="https://img.icons8.com/clouds/100/undefined/ok.png" alt="clouds"/></h1>
         <div class="card">
             <div class="face face1">
                 <div class="content">
@@ -54,6 +54,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
         body {
             display: flex;
@@ -226,6 +227,12 @@
             font-weight: 400;
             text-align: center;
             text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        img#clouds{
+            display: inline-block;
+            vertical-align: middle;
         }
 
         @media screen and (max-width: 1000px) {
