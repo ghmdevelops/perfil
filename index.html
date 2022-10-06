@@ -11,10 +11,10 @@
     <meta name="author" content="Gehaime B." />
     <meta name="robots" content="index,follow" />
     <meta name="description" content="Saiba mais sobre meu perfil">
-    <title>Bem vindo | Pagina inicial</title>
+    <title>Pagina inicial | Meu Perfil</title>
     <script src="https://kit.fontawesome.com/dc28592b31.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/48/000000/username.png" type="image/x-icon">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -266,7 +266,7 @@
             cursor: pointer;
         }
 
-        footer{
+        footer {
             font-size: 19px;
         }
     }
@@ -319,7 +319,22 @@
         <b>#Habilidades/contato</b>
     </footer>
 
+
     <script>
+        function preventBack() {
+            window.history.forward();
+        }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () {
+            null
+        };
+    </script>
+
+    <script>
+        $('#title-pag').on('click', function () {
+            window.location.href = 'https://github.com/gehaimeBarros';
+        });
+
         $(function () {
 
             var sels = $(".fake-sel");
